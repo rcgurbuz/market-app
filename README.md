@@ -49,10 +49,6 @@ React Context Api is used for state management. Also for more stability immer is
 
 Services are composed of two main part api which is used to create instance and endpoints.
 
-### Utils
-
-Utilities helper functions and methods can be defined in this folder.
-
 ## Usage
 
 > Clone the repository to your local machine
