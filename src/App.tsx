@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from 'styled-components';
+import { theme, GlobalStyle, SpinnerWrapper } from './theme';
+import Header from './views/Header';
+import Footer from './views/Footer';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Home from './views/Home';
+import { CircularProgress as Spinner } from '@material-ui/core';
+import { RootState } from './store/store';
+import { ICompaniesState } from './store/companies/companies';
+import { useSelector } from 'react-redux';
 
 function App() {
+  const { isLoading } = useSelector<RootState, ICompaniesState>(
+    (state: RootState) => state?.companies
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Header />
+      <BrowserRouter>
+        {isLoading && (
+          <SpinnerWrapper>
+            <Spinner />
+          </SpinnerWrapper>
+        )}
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }
 

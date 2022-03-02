@@ -1,46 +1,99 @@
-# Getting Started with Create React App
+<h1 align="center">Market App</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+The full project requirements can be found below.
 
-In the project directory, you can run:
+## Built With
 
-### `npm start`
+- TypeScript
+- React
+- Redux-Saga
+- Material UI
+- Styled Components
+- Json Server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Folder Structure
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+App --
+components => App shared components <br/>
+constants => App shared components <br/>
+hooks => Helper hooks <br/>
+images => Umages used in the app<br/>
+services => endpoints and apis<br/>
+store => global stores (Reux, Context API etc.)<br/>
+pages => main part of app <br/>
+theme => style customization, styled component config.<br/>
 
-### `npm test`
+Server--
+server=> backend for storing data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Components
 
-### `npm run build`
+Components are the main tiny part of pages.You can find unique Components.Every component has also its own styled.ts file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Theming
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can create and theme object and thanks to styled component ThemeProvider , we can use as prop in components.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+  margin-left: ${(props) => props.theme.gutters.small};
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Store
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React Context Api is used for state management. Also for more stability immer is adapted to reducer.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Services
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Services are composed of two main part api which is used to create instance and endpoints.
 
-## Learn More
+### Utils
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Utilities helper functions and methods can be defined in this folder.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
+
+> Clone the repository to your local machine
+
+```sh
+$ --https://github.com/rcgurbuz/market-app.git
+```
+
+> cd into the directory, install dependencies, build and start
+
+```sh
+$ cd market-app
+$ npm
+$ npm start
+
+$ cd server
+$ npm
+$ npm run develop
+
+```
+
+> Open `http://127.0.0.1:4000` using your favourite broswer, if it doesn't open automatically.
+> and npm start.
+
+## Author
+
+👤 **Rıfat Can Gürbüz**
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/rcgurbuz/market-app
+/issues).
+
+1. Fork it (https://github.com/rcgurbuz/market-app.git/fork)
+2. Create your working branch (git checkout -b [choose-a-name])
+3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
+4. Push to the branch (git push origin [chosen-name])
+5. Create a new Pull Request
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+- Github: [@rcgurbuz](https://github.com/rcgurbuz)

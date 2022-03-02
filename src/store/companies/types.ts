@@ -1,0 +1,4 @@
+// Action Types
+export const GET_COMPANIES = 'GET_COMPANIES';
+export const GET_COMPANIES_SUCCESS = 'GET_COMPANIES_SUCCESS';
+export const GET_COMPANIES_FAIL = 'GET_COMPANIES_FAIL';
