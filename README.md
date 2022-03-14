@@ -43,7 +43,7 @@ You can create and theme object and thanks to styled component ThemeProvider , w
 
 ### Store
 
-React Context Api is used for state management. Also for more stability immer is adapted to reducer.
+Redux is used for state management.
 
 ### Services
 
